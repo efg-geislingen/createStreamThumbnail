@@ -57,7 +57,7 @@ GUI:
 ### `cli.py` (recommended)
 
 ```
-python cli.py --template "C:\Templates\template.xcf" --title "Woodworking Course" --theme Autumn --name John --date 2026-09-15
+python cli.py --template "C:\Templates\template.xcf" --title "Predigttitel" --theme Richter --name "Max Mustermann" --date 2026-09-15
 ```
 
 Arguments:
@@ -82,7 +82,7 @@ Exit status mirrors `gimp-console`'s exit code.
 troubleshooting, or from Script-Fu/another tool:
 
 ```
-"C:\Program Files\GIMP 3\bin\gimp-console-3.2.exe" -i --batch-interpreter=plug-in-script-fu-eval -b "(python-fu-stream-thumbnail-batch #:template \"C:\\Templates\\template.xcf\" #:title \"Woodworking Course\" #:title-json \"\" #:theme \"Autumn\" #:name \"John\" #:date \"2026-09-15\" #:output \"\")" -b "(gimp-quit 0)"
+"C:\Program Files\GIMP 3\bin\gimp-console-3.2.exe" -i --batch-interpreter=plug-in-script-fu-eval -b "(python-fu-stream-thumbnail-batch #:template \"C:\\Templates\\template.xcf\" #:title \"Predigttitel\" #:title-json \"\" #:theme \"Richter\" #:name \"Max Mustermann\" #:date \"2026-09-15\" #:output \"\")" -b "(gimp-quit 0)"
 ```
 
 (GIMP 3's `gimp-console` requires `--batch-interpreter=plug-in-script-fu-eval`
@@ -105,8 +105,8 @@ Either an inline JSON string or a path to a `.json` file:
 ```json
 {
   "runs": [
-    { "text": "Woodworking\n", "font": "Font A", "size": 72 },
-    { "text": "Course", "font": "Font B", "size": 64, "bold": true }
+    { "text": "Predigt\n", "font": "Font A", "size": 72 },
+    { "text": "Titel", "font": "Font B", "size": 64, "bold": true }
   ]
 }
 ```
@@ -131,8 +131,8 @@ groups is fine):
 | `@TitleText` | The title text layer |
 | `@TitleBox` | Background box behind the title — cleared and redrawn to fit whatever the title currently measures |
 | `@LabelText` | The Prediger/name text layer |
-| `@Image <Name>` | One per selectable Prediger, e.g. `@Image John`, `@Image Jane` |
-| `@Background <Theme>` | One per selectable Predigt-Reihe, e.g. `@Background Autumn` |
+| `@Image <Name>` | One per selectable Prediger, e.g. `@Image Max Mustermann`, `@Image Maja Musterfrau` |
+| `@Background <Theme>` | One per selectable Predigt-Reihe, e.g. `@Background Richter` |
 | `@DefaultImage` | Shown when the requested name doesn't match any `@Image <Name>` layer |
 | `@DefaultBackground` | Shown when the requested theme doesn't match any `@Background <Theme>` layer |
 
